@@ -15,7 +15,7 @@ output "x" {
 }
 
 output "vars" {
-  value = "values, ${var.a}, ${var.b}, ${var.c}, ${var.d} "
+  value = "values, a = ${var.a}, b=${var.b}, c=${var.c}, d=${var.d} "
 }
 
 // if a variable uses with combination of other strings or in quotes ${} is used
