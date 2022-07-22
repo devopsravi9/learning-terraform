@@ -10,6 +10,6 @@ resource "aws_instance" "web" {
   count         = var.no_of_instances
 
   tags = {
-    Name = "terraform-${count.index}"
+    Name = "terraform-${count.index+1}"
   }
 }
