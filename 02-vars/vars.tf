@@ -29,3 +29,24 @@ variable "c" {}
 
 variable "d" {}
 //this declared from shell, command is : export TF_VAR_d=500
+
+variable "list" {
+  default = [100, 200, 300, "abc", true]
+}
+
+output "sample" {
+  value = var.list[1]
+}
+
+// access variable from list
+
+variable "map" {
+  default = {
+    a = 100
+    b = 200
+  }
+}
+
+output "sample1" {
+  value = var.map["a"]
+}
