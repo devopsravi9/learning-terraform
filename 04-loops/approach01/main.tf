@@ -1,3 +1,5 @@
+// count and for_each are meta arguements can use with any module or resources
+
 variable "no_of_instances" {
   default = 2
 }
@@ -8,6 +10,6 @@ resource "aws_instance" "web" {
   count         = var.no_of_instances
 
   tags = {
-    Name = "terraform"
+    Name = "terraform-${count.index}"
   }
 }
