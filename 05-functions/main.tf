@@ -10,10 +10,25 @@ variable "map" {
   }
 }
 
+variable "map1" {
+  default = {
+    firstchoice = {
+      a = 1
+      b = 2
+      c = 3
+      d = 4
+    }
+  }
+}
+
 output "list_length" {
   value = length(var.list)
 }
 
 output "map_length" {
   value = length(var.map)
+}
+
+output "map_in_map_length" {
+  value = length(var.map1["firstchoice"])
 }
