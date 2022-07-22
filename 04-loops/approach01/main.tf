@@ -13,3 +13,13 @@ resource "aws_instance" "web" {
     Name = "terraform-${count.index+1}"
   }
 }
+
+//if count is one
+output "public_ip_address" {
+  value = aws_instance.web.public_ip
+}
+
+// if count is > 1
+output "public_ip_addreses" {
+  value = aws_instance.web.*.public_ip
+}
