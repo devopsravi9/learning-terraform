@@ -4,7 +4,7 @@ resource "aws_instance" "web" {
   instance_type = var.instance_type
 
   tags = {
-    Name = "terraform-${count.index+1}"
+    Name = "terraform"
   }
 }
 
