@@ -34,7 +34,7 @@ resource "null_resource"  "null" {
   connection {
     type     = "ssh"
     user     = "root"
-    password = DevOps321
+    password = "DevOps321"
     host     = aws_instance.web.public_ip
   }
 
