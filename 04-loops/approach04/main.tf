@@ -7,7 +7,7 @@ module "ec2" {
 
 variable "instances" {
   default = {
-    t3.micro = 2
-    t2.micro = 1
+    "t3.micro" = 2
+    "t2.micro" = 1
   }
 }
