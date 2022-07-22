@@ -7,12 +7,35 @@ resource "aws_instance" "web" {
     Name = "terraform"
   }
 
+//  provisioner "remote-exec" {
+//  connection {
+//    type     = "ssh"
+//    user     = "root"
+//    password = DevOps321
+//    host     = self.public_ip
+//  }
+//
+//    inline = [
+//      "uname",
+//    ]
+//  }
+}
+
+// if we even change command that command is not executing. so we decouple resources
+//and to run null resource each time command changes we use trigger along with timestamp
+//everytime time changes and triggers
+
+resource "null_resource"  "null" {
+  triggers = {
+    a = timestamp()
+  }
+
   provisioner "remote-exec" {
   connection {
     type     = "ssh"
     user     = "root"
     password = DevOps321
-    host     = self.public_ip
+    host     = aws_instance.web.public_ip
   }
 
     inline = [
