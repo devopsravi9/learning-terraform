@@ -14,3 +14,9 @@ terraform {
     region = "us-east-1"
   }
 }
+
+
+
+// send var from source as output
+//in root, receive var from source and send as arguemnt to destination
+//receive var at source by calling a var.
