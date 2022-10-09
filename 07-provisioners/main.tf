@@ -19,7 +19,9 @@ resource "aws_instance" "web" {
 //      "uname",
 //    ]
 //  }
-}
+//}
+// if we want to run some commands inside a machine at or after creation of resource we use provisioner.
+
 
 // if we even change command that command is not executing. so we decouple resources
 //and to run null resource each time command changes we use trigger along with timestamp

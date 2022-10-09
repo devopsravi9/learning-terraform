@@ -13,6 +13,9 @@ output "a" {
 output "x" {
   value = "value of a is ${var.a}"
 }
+//if we use variable with any combination of string we go with ${var.var_name}.
+//if it is only variable we usr var.var_name
+
 
 output "vars" {
   value = "values, a = ${var.a}, b=${var.b}, c=${var.c}, d=${var.d} "
